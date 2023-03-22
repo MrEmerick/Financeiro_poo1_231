@@ -48,5 +48,6 @@ namespace ControleContas.Model
         {
             get => _contaMaiorSaldo;
         }
+        public Cliente Titular { get; set; }
     }
 }
