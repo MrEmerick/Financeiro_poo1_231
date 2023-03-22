@@ -12,4 +12,5 @@ namespace ControleContas.Model
         public string Cpf { get; private set; }
         public int AnoNascimento { get; private set; }
     }
+
 }
