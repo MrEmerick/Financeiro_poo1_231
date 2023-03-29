@@ -32,6 +32,7 @@ namespace ControleContas.Model
                 _contaMaiorSaldo = _numero;
             }
         }
+       
 
         public string Numero {
             get => _numero; 
@@ -49,5 +50,26 @@ namespace ControleContas.Model
             get => _contaMaiorSaldo;
         }
         public Cliente Titular { get; set; }
+        public void Depositar(decimal valor)
+        {
+            if(valor < 0)
+            {
+                Saldo += valor;
+            }
+        }
+       
+        public bool Sacar(decimal valorSaque)
+        {
+            if (_saldo - valorSaque < 0)
+            {
+                return false;
+            }
+            _saldo -= valorSaque;
+            return true;
+
+        }
+        
+
+        
     }
 }

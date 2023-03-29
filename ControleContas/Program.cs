@@ -12,3 +12,10 @@ Cliente cliente1 = new Cliente("Fred", "12343232111", 2000);
 conta.Titular = cliente1;
 conta2.Titular = cliente1;
 Console.WriteLine($"O titular da conta {conta.Numero} é o cliente {conta.Titular.Nome}");
+conta2.Depositar(99.42m);
+Console.WriteLine($"saldo da conta{conta2.Numero} antes do depósito: {conta2.Saldo}");
+conta2.Depositar(-99.42m);
+Console.WriteLine($"saldo da conta{conta2.Numero} dpois do depósito invalido: {conta2.Saldo}");
+conta2.Sacar(90.3m);
+Console.WriteLine($"saldo da conta{conta2.Numero} dpois do depósito invalido: {conta2.Saldo}");
+
